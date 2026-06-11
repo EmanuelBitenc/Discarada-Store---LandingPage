@@ -66,8 +66,22 @@ export const metadata: Metadata = {
     description: "Nos detalhes que constroem lembranças.",
     url: "/",
     siteName: "Discarada Acessórios",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Discarada Acessórios",
+      },
+    ],
     type: "website",
     locale: "pt_BR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Discarada Acessórios",
+    description: "Nos detalhes que constroem lembranças.",
+    images: ["/opengraph-image.png"],
   },
   robots: {
     index: true,
