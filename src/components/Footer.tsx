@@ -24,9 +24,9 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { l: "Sobre", h: "#sobre" },
-                { l: "Nossas Lojas", h: "#lojas" },
-                { l: "Produtos", h: "#produtos" },
+                { l: "Coleção", h: "#produtos" },
                 { l: "Depoimentos", h: "#depoimentos" },
+                { l: "Nossas Lojas", h: "#lojas" },
               ].map((link) => (
                 <li key={link.h}>
                   <a href={link.h} className="text-sm text-text-secondary hover:text-gold transition-colors">{link.l}</a>

@@ -16,9 +16,9 @@ export default function Navbar() {
 
   const links = [
     { label: "Sobre", href: "#sobre", external: false },
-    { label: "Lojas", href: "#lojas", external: false },
     { label: "Coleção", href: "#produtos", external: false },
     { label: "Depoimentos", href: "#depoimentos", external: false },
+    { label: "Lojas", href: "#lojas", external: false },
   ];
 
   return (

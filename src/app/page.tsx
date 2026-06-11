@@ -14,10 +14,10 @@ export default function Home() {
       <main>
         <HeroSection />
         <SobreAMarca />
-        <LinksUteis />
-        <NossasLojas />
         <GaleriaProdutos />
         <ProvaSocial />
+        <NossasLojas />
+        <LinksUteis />
       </main>
       <Footer />
     </div>
