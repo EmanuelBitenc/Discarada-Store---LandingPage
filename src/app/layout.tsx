@@ -94,11 +94,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Discarada Acessórios",
-    description: "Nos detalhes que constroem lembranças.",
-  },
 };
 
 export default function RootLayout({
