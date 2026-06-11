@@ -66,14 +66,6 @@ export const metadata: Metadata = {
     description: "Nos detalhes que constroem lembranças.",
     url: "/",
     siteName: "Discarada Acessórios",
-    images: [
-      {
-        url: "/logo/logo.png",
-        width: 800,
-        height: 600,
-        alt: "Logo Discarada Acessórios",
-      },
-    ],
     type: "website",
     locale: "pt_BR",
   },
@@ -92,7 +84,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Discarada Acessórios",
     description: "Nos detalhes que constroem lembranças.",
-    images: ["/logo/logo.png"],
   },
 };
 
