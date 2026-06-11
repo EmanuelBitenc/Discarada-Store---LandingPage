@@ -5,10 +5,10 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const produtos = [
-  { src: "/produtos/bolsa.jpg", alt: "Bolsa Clutch", cat: "Bolsas" },
-  { src: "/produtos/brincos.jpg", alt: "Brincos Artesanais", cat: "Brincos" },
-  { src: "/produtos/brincos2.jpg", alt: "Brincos Argola", cat: "Brincos" },
-  { src: "/produtos/oculos.jpg", alt: "Óculos de Sol", cat: "Óculos" },
+  { src: "/produtos/bolsa.jpg", alt: "Detalhes que contam histórias", cat: "Exclusivos" },
+  { src: "/produtos/brincos.jpg", alt: "Elegância Atemporal", cat: "Clássicos" },
+  { src: "/produtos/brincos2.jpg", alt: "Reflexo da sua personalidade", cat: "Signature" },
+  { src: "/produtos/oculos.jpg", alt: "Design que ilumina o olhar", cat: "Radiantes" },
 ];
 
 export default function GaleriaProdutos() {

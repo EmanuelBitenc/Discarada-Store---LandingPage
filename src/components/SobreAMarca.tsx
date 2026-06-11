@@ -18,15 +18,41 @@ export default function SobreAMarca() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-dark-card">
-              <Image
-                src="/imgs/modelos2.png"
-                alt="Modelo com acessórios dourados Discarada"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-transparent" />
+            <div className="relative aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] w-full rounded-2xl overflow-hidden bg-dark-bg">
+              
+              {/* Imagem de Fundo (Efeito) */}
+              <div className="absolute inset-0">
+                <Image
+                  src="/imgs/modelos2.png"
+                  alt="Background effect"
+                  fill
+                  className="object-cover object-top opacity-20 scale-110"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+
+                {/* Efeito de linhas douradas sutis (Grid) */}
+                <div className="absolute left-[20%] top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/20 to-transparent" />
+                <div className="absolute left-[80%] top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold/20 to-transparent" />
+                <div className="absolute top-[25%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+                <div className="absolute top-[75%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+
+                {/* Degradês para suavizar e mesclar com o fundo */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background/50" />
+              </div>
+
+              {/* Imagem Principal */}
+              <div className="absolute bottom-0 left-[10%] w-[80%] h-[85%] rounded-t-xl overflow-hidden shadow-[0_-10px_40px_rgba(0,0,0,0.8)] z-10 border-t border-x border-gold/5">
+                <Image
+                  src="/imgs/modelos2.png"
+                  alt="Modelo com acessórios dourados Discarada"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 80vw, 40vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+              </div>
+
             </div>
           </motion.div>
 
@@ -62,24 +88,19 @@ export default function SobreAMarca() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-6 mt-10 pt-8 border-t border-dark-border">
-              {[
-                { n: "4", l: "Lojas" },
-                { n: "500+", l: "Produtos" },
-                { n: "1000+", l: "Clientes" },
-              ].map((s, i) => (
-                <motion.div
-                  key={s.l}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.4, delay: 0.5 + i * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="font-serif text-2xl text-gold-gradient">{s.n}</div>
-                  <div className="text-xs tracking-wider text-text-muted mt-1 uppercase">{s.l}</div>
-                </motion.div>
-              ))}
-            </div>
+            <motion.div 
+              initial={{ opacity: 0, y: 15 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mt-10 pt-8 border-t border-white/5"
+            >
+              <p className="text-sm md:text-[15px] text-text-muted font-light tracking-wide leading-relaxed">
+                Você encontrou a loja de acessórios que <span className="text-gold/90">realça quem você é</span>. <br />
+                <span className="italic text-text-secondary/80 mt-1 inline-block">
+                  Perfeita para <span className="text-gold/90">mulheres autênticas</span>.
+                </span>
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </div>

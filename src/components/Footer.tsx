@@ -50,7 +50,17 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-dark-border flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-text-muted">© {new Date().getFullYear()} Discarada Acessórios — Todos os direitos reservados.</p>
-          <p className="text-xs text-text-muted/50">Feito com ♥ para mulheres que brilham</p>
+          <p className="text-xs text-text-muted/60 flex items-center gap-1">
+            Desenvolvido por 
+            <a 
+              href="https://www.linkedin.com/in/emanuelbitencourt/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-gold/60 hover:text-gold transition-colors underline decoration-gold/30 underline-offset-4"
+            >
+              Emanuel Bitencourt
+            </a>
+          </p>
         </div>
       </div>
     </footer>

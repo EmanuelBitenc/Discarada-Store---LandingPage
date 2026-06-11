@@ -42,27 +42,28 @@ export default function ProvaSocial() {
           </motion.div>
 
           {/* Testimonials grid right side */}
-          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 lg:gap-8 mt-8 lg:mt-0">
             {depoimentos.map((d, i) => (
               <motion.div
                 key={d.src}
-                initial={{ opacity: 0, y: 30 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
-                className="relative"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="relative w-full max-w-[280px] mx-auto md:max-w-none"
               >
                 {/* Gold frame effect like in the old design */}
                 <div className="absolute -inset-2 bg-gold/10 border border-gold/20 rounded-xl transform translate-x-2 translate-y-2" />
                 <div className="absolute -inset-2 bg-gold/5 border border-gold/10 rounded-xl transform -translate-x-1 -translate-y-1" />
                 
                 {/* The actual image */}
-                <div className="relative aspect-square rounded-lg overflow-hidden border-2 border-gold/40 shadow-2xl bg-dark-surface z-10">
+                <div className="relative w-full aspect-square rounded-lg overflow-hidden border-2 border-gold/40 shadow-2xl bg-dark-surface z-10">
                   <Image
                     src={d.src}
                     alt={d.alt}
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    sizes="(max-width: 768px) 80vw, 33vw"
                   />
                   {/* Subtle vignette */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
