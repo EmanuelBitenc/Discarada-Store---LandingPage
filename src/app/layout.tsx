@@ -26,36 +26,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
-  ),
-  title: {
-    default: "Discarada Acessórios | Nos detalhes que constroem lembranças",
-    template: "%s | Discarada Acessórios",
-  },
+  title: "Discarada Acessórios | Nos detalhes que constroem lembranças",
   description:
     "A Discarada existe para acompanhar mulheres em diferentes fases da vida. Acessórios que reforçam identidade e sustentam presença. Conheça nossas lojas em Friburgo, Gama, Centro e Valparaíso.",
-  keywords: [
-    "acessórios femininos",
-    "bijuterias",
-    "brincos",
-    "bolsas",
-    "óculos de sol",
-    "Discarada",
-    "moda feminina",
-    "acessórios Friburgo",
-    "acessórios Gama",
-    "acessórios Valparaíso",
-  ],
-  authors: [{ name: "Discarada Acessórios" }],
-  creator: "Discarada Acessórios",
-  publisher: "Discarada Acessórios",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  keywords:
+    "acessórios femininos, bijuterias, brincos, bolsas, óculos de sol, Discarada, moda feminina, acessórios Friburgo, acessórios Gama, acessórios Valparaíso",
+  robots: "index, follow",
   icons: {
     icon: "/logo/logoCurta.png",
     shortcut: "/logo/logoCurta.png",
@@ -63,9 +39,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Discarada Acessórios",
-    description: "Nos detalhes que constroem lembranças.",
-    url: "/",
-    siteName: "Discarada Acessórios",
+    description: "Nos detalhes que constroem lembranças. Acessórios que reforçam identidade e sustentam presença.",
     images: [
       {
         url: "/opengraph-image.png",
@@ -74,25 +48,6 @@ export const metadata: Metadata = {
         alt: "Discarada Acessórios",
       },
     ],
-    type: "website",
-    locale: "pt_BR",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Discarada Acessórios",
-    description: "Nos detalhes que constroem lembranças.",
-    images: ["/opengraph-image.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
 };
 
