@@ -26,7 +26,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://discarada.com.br"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+  ),
   title: {
     default: "Discarada Acessórios | Nos detalhes que constroem lembranças",
     template: "%s | Discarada Acessórios",
@@ -52,6 +55,11 @@ export const metadata: Metadata = {
     email: false,
     address: false,
     telephone: false,
+  },
+  icons: {
+    icon: "/logo/logoCurta.png",
+    shortcut: "/logo/logoCurta.png",
+    apple: "/logo/logoCurta.png",
   },
   openGraph: {
     title: "Discarada Acessórios",
