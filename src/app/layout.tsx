@@ -92,7 +92,26 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${playfair.variable} ${montserrat.variable} antialiased`}
     >
-      <body>
+      <body className="relative min-h-screen">
+        {/* Background Decorative Details */}
+        <div className="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
+          {/* Top right dots */}
+          <div className="absolute top-24 right-12 flex gap-3 opacity-40">
+            <div className="w-1.5 h-1.5 rounded-full bg-gold"></div>
+            <div className="w-1.5 h-1.5 rounded-full bg-gold"></div>
+            <div className="w-1.5 h-1.5 rounded-full bg-gold"></div>
+          </div>
+          
+          {/* Bottom left subtle glow */}
+          <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px]"></div>
+          
+          {/* Middle right subtle line */}
+          <div className="absolute top-1/3 right-0 w-[1px] h-96 bg-gradient-to-b from-transparent via-gold/20 to-transparent"></div>
+          
+          {/* Top left faint circle outline */}
+          <div className="absolute top-40 -left-16 w-64 h-64 border border-gold/10 rounded-full"></div>
+        </div>
+
         {children}
         <Analytics />
         <SpeedInsights />
