@@ -4,6 +4,12 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
+const Sparkle = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+    <path d="M12 0C12 0 12 9.5 24 12C24 12 12 14.5 12 24C12 24 12 14.5 0 12C0 12 12 9.5 12 0Z" />
+  </svg>
+);
+
 const playfair = Playfair_Display({
   variable: "--font-serif",
   subsets: ["latin"],
@@ -93,23 +99,29 @@ export default function RootLayout({
       className={`${playfair.variable} ${montserrat.variable} antialiased`}
     >
       <body className="relative min-h-screen">
-        {/* Background Decorative Details */}
+        {/* Thematic Decorative Background (Jewelry Sparkles) */}
         <div className="fixed inset-0 pointer-events-none z-[-1] overflow-hidden">
-          {/* Top right dots */}
-          <div className="absolute top-24 right-12 flex gap-3 opacity-40">
-            <div className="w-1.5 h-1.5 rounded-full bg-gold"></div>
-            <div className="w-1.5 h-1.5 rounded-full bg-gold"></div>
-            <div className="w-1.5 h-1.5 rounded-full bg-gold"></div>
+          {/* Top Right Sparkle Group */}
+          <div className="absolute top-20 right-16 flex flex-col gap-6 opacity-20 text-gold drop-shadow-[0_0_8px_rgba(201,168,76,0.5)] animate-pulse" style={{ animationDuration: '4s' }}>
+            <Sparkle className="w-8 h-8 ml-8" />
+            <Sparkle className="w-4 h-4" />
+            <Sparkle className="w-6 h-6 ml-12" />
           </div>
           
-          {/* Bottom left subtle glow */}
-          <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px]"></div>
-          
-          {/* Middle right subtle line */}
-          <div className="absolute top-1/3 right-0 w-[1px] h-96 bg-gradient-to-b from-transparent via-gold/20 to-transparent"></div>
-          
-          {/* Top left faint circle outline */}
-          <div className="absolute top-40 -left-16 w-64 h-64 border border-gold/10 rounded-full"></div>
+          {/* Bottom Left Large Sparkle */}
+          <div className="absolute bottom-32 left-12 opacity-[0.15] text-gold animate-pulse" style={{ animationDuration: '6s' }}>
+            <Sparkle className="w-16 h-16" />
+          </div>
+
+          {/* Middle Left Tiny Sparkles */}
+          <div className="absolute top-1/2 left-8 opacity-20 text-gold/70">
+            <Sparkle className="w-3 h-3 mb-4" />
+            <Sparkle className="w-5 h-5 ml-4" />
+          </div>
+
+          {/* Subtle Ambient Glow */}
+          <div className="absolute top-1/4 -right-32 w-96 h-96 bg-gold/5 rounded-full blur-[100px]"></div>
+          <div className="absolute bottom-0 -left-32 w-96 h-96 bg-gold/5 rounded-full blur-[100px]"></div>
         </div>
 
         {children}
