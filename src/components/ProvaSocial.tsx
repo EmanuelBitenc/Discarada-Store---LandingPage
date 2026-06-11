@@ -17,14 +17,14 @@ export default function ProvaSocial() {
   return (
     <section id="depoimentos" ref={ref} className="relative w-full py-24 md:py-32 scroll-mt-20">
       <div className="w-full max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
           
           {/* Header left side */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
-            className="lg:w-1/3 text-center lg:text-left"
+            className="lg:w-1/3 xl:w-[30%] text-center lg:text-left"
           >
             <div className="flex justify-center lg:justify-start items-center gap-3 mb-6">
               <svg className="w-8 h-8 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -42,7 +42,7 @@ export default function ProvaSocial() {
           </motion.div>
 
           {/* Testimonials grid right side */}
-          <div className="w-full lg:w-2/3 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 lg:gap-8 mt-8 lg:mt-0">
+          <div className="w-full lg:flex-1 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-4 lg:gap-6 mt-8 lg:mt-0">
             {depoimentos.map((d, i) => (
               <motion.div
                 key={d.src}
@@ -50,7 +50,7 @@ export default function ProvaSocial() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="relative w-full max-w-[280px] mx-auto md:max-w-none"
+                className="relative w-full max-w-[340px] mx-auto md:max-w-none"
               >
                 {/* Gold frame effect like in the old design */}
                 <div className="absolute -inset-2 bg-gold/10 border border-gold/20 rounded-xl transform translate-x-2 translate-y-2" />
